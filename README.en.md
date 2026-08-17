@@ -18,6 +18,8 @@ A **skill for making skills** — the complete methodology of "how to write an e
 - **Evaluate** a skill's output quality (evals)
 - **Bundle** reusable scripts
 
+> **Language convention**: the SKILL.md and references/ in this repo are entirely in English (best cross-agent effect, zero translation loss); README-style human-facing files are bilingual.
+
 ## Why
 
 Stop relying on "flipping through pages + writing by feel". Standardize the act of writing a skill: what fields exist, how they're constrained, how to write well, how to verify it actually works, how to bundle scripts — all distilled into a reproducible pipeline.
@@ -31,12 +33,15 @@ skill-loomery/
 ├── SKILL.md                      # entry: frontmatter + core workflow + hard rules
 ├── scripts/                      # executable scripts (see scripts/README.md)
 │   └── .gitkeep                  # placeholder so Git tracks the empty directory
-├── references/                   # on-demand reference docs (progressive disclosure)
+├── references/                   # on-demand reference docs (progressive disclosure; index at references/README.md)
+│   ├── quickstart.md              # skill definition + 3 stages + roll-dice example
 │   ├── specification.md          # SKILL.md format spec
 │   ├── best-practices.md         # writing good skills
 │   ├── optimizing-descriptions.md# optimizing description triggering
 │   ├── evaluating.md             # evals for output quality
-│   └── using-scripts.md          # running commands / bundling scripts
+│   ├── using-scripts.md          # running commands / bundling scripts
+│   ├── README.md                 # directory index (Chinese)
+│   └── README.en.md              # directory index (English)
 ├── assets/                      # static resources (see assets/README.md)
 │   └── skill-template.md         # minimal SKILL.md template
 ├── README.md                     # Chinese

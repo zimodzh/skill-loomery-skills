@@ -18,6 +18,8 @@
 - **评估** skill 的输出质量（evals）
 - **打包**可复用脚本
 
+> **语言约定**：本仓库的 SKILL.md 与 references/ 全部为英文（保证跨 agent 的最佳效果与零翻译失真）；README 类给人看的文件为中英双语。
+
 ## 为什么做这个
 
 不再靠"翻一堆网页 + 凭感觉写"。把写 skill 这件事标准化：**有什么字段、怎么约束、怎么写得好、怎么验证它真的有效、怎么打包脚本**——全部沉淀成一条可复现的流水线。
@@ -28,20 +30,23 @@
 
 ```
 skill-loomery/
-├── SKILL.md                      # skill 入口：frontmatter + 核心流程 + 铁律
-├── scripts/                      # 可执行脚本（说明见 scripts/README.md）
-│   └── .gitkeep                  # 占位文件，使空目录被 git 跟踪
-├── references/                   # 按需加载的参考文档（渐进披露）
-│   ├── specification.md          # SKILL.md 格式规范
-│   ├── best-practices.md         # 写好 skill 的实践
-│   ├── optimizing-descriptions.md# 优化 description 触发
-│   ├── evaluating.md             # evals 评估输出质量
-│   └── using-scripts.md          # 跑命令 / 打包脚本
-├── assets/                      # 静态资源（说明见 assets/README.md）
-│   └── skill-template.md         # 最小 SKILL.md 模板
-├── README.md                     # 本文件（中文）
-├── README.en.md                  # 英文版
-├── LICENSE                       # MIT
+├── SKILL.md                        # skill 入口：frontmatter + 核心流程 + 铁律
+├── scripts/                        # 可执行脚本（说明见 scripts/README.md）
+│   └── .gitkeep                    # 占位文件，使空目录被 git 跟踪
+├── references/                     # 按需加载的参考文档（渐进披露，索引见 references/README.md）
+│   ├── quickstart.md                # skill 定义 + 三阶段 + roll-dice 最小示例
+│   ├── specification.md            # SKILL.md 格式规范
+│   ├── best-practices.md           # 写好 skill 的实践
+│   ├── optimizing-descriptions.md  # 优化 description 触发
+│   ├── evaluating.md               # evals 评估输出质量
+│   ├── using-scripts.md            # 跑命令 / 打包脚本
+│   ├── README.md                   # 本目录索引（中文）
+│   └── README.en.md                # 本目录索引（英文）
+├── assets/                         # 静态资源（说明见 assets/README.md）
+│   └── skill-template.md           # 最小 SKILL.md 模板
+├── README.md                       # 本文件（中文）
+├── README.en.md                    # 英文版
+├── LICENSE                         # MIT
 └── .gitignore
 ```
 
