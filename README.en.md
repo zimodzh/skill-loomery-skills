@@ -1,10 +1,10 @@
+# skill-loomery
+
 <p align="center">  <samp>
     <a href="./README.md">中文</a> ·
     <strong>English</strong>
   </samp>
 </p>
-
-# skill-loomery
 
 Weave user goals, project material, and real workflows into reusable,
 validated Agent Skills.
@@ -31,8 +31,12 @@ skill-loomery/
 │   ├── output-evaluation.md
 │   └── script-design.md
 ├── assets/
+│   ├── README.md
+│   ├── README.en.md
 │   └── evals-template.json
 └── evals/
+    ├── README.md
+    ├── README.en.md
     └── evals.json
 ```
 
