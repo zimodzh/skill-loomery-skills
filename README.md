@@ -1,10 +1,13 @@
 # Skill Loomery
 
-**语言 / Language**：[简体中文](#) · [English](README.en.md)
+<p align="center">
+  <samp>
+    <strong>中文</strong> ·
+    <a href="./README.en.md">English</a>
+  </samp>
+</p>
 
 一个「**制作 Skill 的 Skill**」——把"如何写一个高效、可触发、可验证的 Agent Skill"的完整方法论，固化成可被智能体按需加载的开放格式技能。
-
-> 尊严自持，标准先行。开源只是顺手，给好东西一个家——但永远不会因为迁就别人而改变自己的标准。
 
 ## 这是什么
 
@@ -26,17 +29,20 @@
 ```
 skill-loomery/
 ├── SKILL.md                      # skill 入口：frontmatter + 核心流程 + 铁律
+├── scripts/                      # 可执行脚本（说明见 scripts/README.md）
+│   └── .gitkeep                  # 占位文件，使空目录被 git 跟踪
 ├── references/                   # 按需加载的参考文档（渐进披露）
 │   ├── specification.md          # SKILL.md 格式规范
 │   ├── best-practices.md         # 写好 skill 的实践
 │   ├── optimizing-descriptions.md# 优化 description 触发
 │   ├── evaluating.md             # evals 评估输出质量
 │   └── using-scripts.md          # 跑命令 / 打包脚本
-├── assets/
+├── assets/                      # 静态资源（说明见 assets/README.md）
 │   └── skill-template.md         # 最小 SKILL.md 模板
 ├── README.md                     # 本文件（中文）
 ├── README.en.md                  # 英文版
-└── LICENSE                       # MIT
+├── LICENSE                       # MIT
+└── .gitignore
 ```
 
 ## 快速开始

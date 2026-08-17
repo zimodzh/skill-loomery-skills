@@ -1,10 +1,13 @@
 # Skill Loomery
 
-**Language / 语言**：[简体中文](README.md) · [English](#)
+<p align="center">
+  <samp>
+    <a href="./README.md">中文</a> ·
+    <strong>English</strong>
+  </samp>
+</p>
 
 A **skill for making skills** — the complete methodology of "how to write an effective, reliably-triggering, verifiable Agent Skill", distilled into an open-format skill that agents can load on demand.
-
-> Standards first, with quiet self-respect. Open-sourcing is just giving good work a home — never an excuse to compromise my own standards.
 
 ## What is this
 
@@ -26,17 +29,20 @@ This repo is that pipeline, itself built as a compliant skill. **Eating our own 
 ```
 skill-loomery/
 ├── SKILL.md                      # entry: frontmatter + core workflow + hard rules
+├── scripts/                      # executable scripts (see scripts/README.md)
+│   └── .gitkeep                  # placeholder so Git tracks the empty directory
 ├── references/                   # on-demand reference docs (progressive disclosure)
 │   ├── specification.md          # SKILL.md format spec
 │   ├── best-practices.md         # writing good skills
 │   ├── optimizing-descriptions.md# optimizing description triggering
 │   ├── evaluating.md             # evals for output quality
 │   └── using-scripts.md          # running commands / bundling scripts
-├── assets/
+├── assets/                      # static resources (see assets/README.md)
 │   └── skill-template.md         # minimal SKILL.md template
 ├── README.md                     # Chinese
 ├── README.en.md                  # this file (English)
-└── LICENSE                       # MIT
+├── LICENSE                       # MIT
+└── .gitignore
 ```
 
 ## Quick start
