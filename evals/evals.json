@@ -1,0 +1,39 @@
+{
+  "skill_name": "skill-loomery",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a portable Agent Skill from this release runbook. Keep the main SKILL.md concise, preserve the exact deployment order, and include a validation step.",
+      "expected_output": "A valid Skill package with a focused SKILL.md, correct frontmatter, preserved deployment order, and an explicit validation step.",
+      "files": [],
+      "assertions": [
+        "The package contains SKILL.md",
+        "The name matches the package directory",
+        "The workflow preserves the required order",
+        "The workflow includes a validation gate"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Improve this Skill description so it triggers for requests to analyze CSV files and does not trigger for Excel formula editing.",
+      "expected_output": "A specific description with positive scope and a clear boundary against Excel formula editing.",
+      "files": [],
+      "assertions": [
+        "The description states what the Skill does",
+        "The description states when to use it",
+        "The description distinguishes the near-miss task"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review an existing Skill package and tell me what must be fixed before release. Check metadata, links, references, scripts, and evaluation coverage.",
+      "expected_output": "A concrete review with validation findings, missing coverage, and actionable fixes.",
+      "files": [],
+      "assertions": [
+        "The review checks frontmatter and directory naming",
+        "The review checks referenced files and scripts",
+        "The review checks trigger and output evaluation coverage"
+      ]
+    }
+  ]
+}

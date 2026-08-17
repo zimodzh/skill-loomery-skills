@@ -1,0 +1,25 @@
+{
+  "skill_name": "replace-with-skill-name",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "A realistic request that should use the Skill.",
+      "expected_output": "A concrete description of successful output.",
+      "files": [],
+      "assertions": [
+        "A verifiable output or file exists",
+        "Required content is present"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A boundary case or near-miss request.",
+      "expected_output": "The Skill handles the boundary correctly or declines clearly.",
+      "files": [],
+      "assertions": [
+        "The boundary behavior is explicit",
+        "No unsafe or unsupported action is performed"
+      ]
+    }
+  ]
+}
