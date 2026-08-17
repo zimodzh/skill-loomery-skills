@@ -73,6 +73,24 @@ Poor (too vague):
 Helps with PDFs.
 ```
 
+### YAML gotcha: quote values containing `: `
+
+YAML treats `: ` (colon followed by a space) inside an **unquoted** value as the start of a nested mapping. In a compact mapping like:
+
+```yaml
+compatibility: Any agent. No special dependencies; optional tools: git, uv, npm.
+```
+
+the `tools: git` fragment breaks parsing with `Nested mappings are not allowed in compact mappings`, the whole frontmatter fails, and the loader silently skips the skill (it never appears in the registry).
+
+Fix: quote the value, or avoid the colon:
+
+```yaml
+compatibility: "Any agent. No special dependencies; optional tools: git, uv, npm."
+```
+
+This is exactly the bug skill-loomery v1.0.0 shipped with — and why validation (below) is mandatory.
+
 ### Body content
 
 The Markdown body after the frontmatter holds the skill instructions. No format restrictions. Recommended sections: step-by-step instructions, examples of inputs and outputs, common edge cases.
@@ -106,10 +124,12 @@ Run the extraction script: scripts/extract.py
 
 Keep references one level deep; avoid deeply nested chains.
 
-## Validation
+## Validation (mandatory)
 
 ```bash
 skills-ref validate ./my-skill
 ```
 
 Checks that your SKILL.md frontmatter is valid and follows naming conventions.
+
+**Run it immediately after writing the frontmatter, before shipping.** A YAML syntax error (such as the unquoted `: ` above) is caught by the loader and the skill is **silently skipped** — it never shows up, with no visible error. Validating is the only reliable way to catch this class of bug; do not rely on "it looks fine".

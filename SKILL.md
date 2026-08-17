@@ -2,7 +2,7 @@
 name: skill-loomery
 description: Create and refine Agent Skills. A standard workflow for authoring, optimizing, evaluating, and bundling Agent Skills (SKILL.md format). Use when creating a new skill, improving a skill's description or instructions, setting up evals, or bundling reusable scripts.
 license: MIT
-compatibility: Any skills-compatible agent (Claude Code, OpenAI Codex, VS Code Copilot, DSH, etc.). No special system dependencies; optional tools: git, uv, npm.
+compatibility: "Any skills-compatible agent (Claude Code, OpenAI Codex, VS Code Copilot, DSH, etc.). No special system dependencies; optional tools: git, uv, npm."
 metadata:
   author: skill-loomery
   version: "1.0.0"
@@ -38,7 +38,7 @@ A standard workflow for turning expertise into a reusable, reliably-triggering, 
 8. **Bundle scripts** (see references/using-scripts.md)
    When code is needed, follow the one-off command / self-contained script / agentic script design rules.
 
-9. **Validate**: `skills-ref validate ./<skill-name>` (see references/specification.md, "Validation").
+9. **Validate (mandatory)**: run `skills-ref validate ./<skill-name>` immediately after writing frontmatter (see references/specification.md, "Validation"). A YAML syntax error — e.g. an unquoted `: ` — makes the loader silently skip the skill, so never ship without validating.
 
 ## Hard rules (always)
 
@@ -47,6 +47,7 @@ A standard workflow for turning expertise into a reusable, reliably-triggering, 
 - Reference files with **relative paths from the skill root**, at most one level deep.
 - Calibrate instruction strictness to task fragility: give freedom + reasoning for tolerant tasks; give hard commands for fragile/high-risk ones.
 - Agent-facing scripts: **never interactive**, have `--help`, structured output, idempotent, `--dry-run`.
+- In YAML frontmatter, **always quote any value containing `: ` (colon + space)** — an unquoted `key: value` inside a scalar breaks parsing and the skill is silently skipped.
 
 ## What a compliant skill looks like
 
