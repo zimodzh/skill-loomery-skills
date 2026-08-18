@@ -1,0 +1,82 @@
+[
+  {
+    "query": "帮我创建一个 skill，用来给团队做代码审查",
+    "should_trigger": true
+  },
+  {
+    "query": "我想做一个 Agent Skill，让我能快速查公司内部数据",
+    "should_trigger": true
+  },
+  {
+    "query": "怎么优化我这个 skill 的 description，它现在触发不准",
+    "should_trigger": true
+  },
+  {
+    "query": "写一个 SKILL.md，用途是提取 PDF 文本",
+    "should_trigger": true
+  },
+  {
+    "query": "给我的 skill 搭一套 eval，看看它到底好不好用",
+    "should_trigger": true
+  },
+  {
+    "query": "skill 里怎么打包可复用的脚本？",
+    "should_trigger": true
+  },
+  {
+    "query": "SKILL.md 的 frontmatter 有哪些字段和约束？",
+    "should_trigger": true
+  },
+  {
+    "query": "帮我评估一下这个 skill 的输出质量",
+    "should_trigger": true
+  },
+  {
+    "query": "我要做一个能自动填 PDF 表单的 skill，从哪开始",
+    "should_trigger": true
+  },
+  {
+    "query": "写技能的最佳实践有哪些？",
+    "should_trigger": true
+  },
+  {
+    "query": "帮我写一个 python 脚本来处理 CSV 文件",
+    "should_trigger": false
+  },
+  {
+    "query": "这个 SQL 查询怎么优化性能",
+    "should_trigger": false
+  },
+  {
+    "query": "写个 DSH 插件",
+    "should_trigger": false
+  },
+  {
+    "query": "怎么配置 VS Code 的 settings.json",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我给这篇文档做个 PPT",
+    "should_trigger": false
+  },
+  {
+    "query": "git 冲突了怎么解决",
+    "should_trigger": false
+  },
+  {
+    "query": "翻译这段英文",
+    "should_trigger": false
+  },
+  {
+    "query": "写一个正则表达式匹配邮箱",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我 debug 这个 Node.js 报错",
+    "should_trigger": false
+  },
+  {
+    "query": "今晚吃什么好",
+    "should_trigger": false
+  }
+]

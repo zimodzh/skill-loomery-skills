@@ -7,18 +7,23 @@
   </samp>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/github/repo-size/zimodzh/skill-loomery-skills?style=flat-square" alt="repo size" />
+  <img src="https://img.shields.io/github/last-commit/zimodzh/skill-loomery-skills?style=flat-square" alt="last commit" />
+  <img src="https://img.shields.io/github/license/zimodzh/skill-loomery-skills?style=flat-square" alt="MIT license" />
+  <img src="https://img.shields.io/badge/Agent_Skills-compliant-4D6BFE?style=flat-square" alt="Agent Skills compliant" />
+</p>
+
 A **skill for making skills** — the complete methodology of "how to write an effective, reliably-triggering, verifiable Agent Skill", distilled into an open-format skill that agents can load on demand.
 
 ## What is this
 
-`skill-loomery` is an [Agent Skills](https://agentskills.io)-format skill (a folder containing a `SKILL.md`). Once loaded, any compatible agent (Claude Code / OpenAI Codex / VS Code Copilot / DSH, etc.) gains a standard workflow to:
+`skill-loomery` is an [Agent Skills](https://agentskills.io)-format skill (a folder containing a `SKILL.md`). Once loaded, any compatible agent (Claude Code / OpenAI Codex / VS Code Copilot, etc.) gains a standard workflow to:
 
 - **Create** new skills
 - **Optimize** a skill's description (trigger accuracy)
 - **Evaluate** a skill's output quality (evals)
 - **Bundle** reusable scripts
-
-> **Language convention**: the SKILL.md and references/ in this repo are entirely in English (best cross-agent effect, zero translation loss); README-style human-facing files are bilingual.
 
 ## Why
 
@@ -44,21 +49,49 @@ skill-loomery/
 │   └── README.en.md              # directory index (English)
 ├── assets/                      # static resources (see assets/README.md)
 │   └── skill-template.md         # minimal SKILL.md template
+├── evals/                       # description trigger eval set + method
+│   ├── trigger-queries.json     # trigger regression eval set
+│   ├── README.md                # eval method (Chinese)
+│   └── README.en.md             # eval method (English)
 ├── README.md                     # Chinese
 ├── README.en.md                  # this file (English)
 ├── LICENSE                       # MIT
 └── .gitignore
 ```
 
-## Quick start
+## Installation
 
-1. Put this repo into your skills directory (VS Code default `.agents/skills/`, DSH default `~/.agents/skills/`).
-2. Tell an agent: "create a skill that …", or "optimize my skill's description".
-3. The agent triggers skill-loomery and follows the `SKILL.md` workflow.
+The skill is named `skill-loomery`; the Agent Skills spec requires the folder name to match. The repository is named `skill-loomery-skills`. Clone straight into the target folder name:
 
-## Specification
+```bash
+git clone https://github.com/zimodzh/skill-loomery-skills.git <your-skills-dir>/skill-loomery
+```
 
-The canonical format is the [Agent Skills Specification](https://agentskills.io/specification); `references/specification.md` is a distillation.
+Replace `<your-skills-dir>` with the skills directory of your agent. The official docs (Quickstart) give VS Code as the example: `.agents/skills/` under the project. Agent Skills is an open format — the same skill works in other compatible agents (Claude Code, OpenAI Codex, etc.); drop it into that agent's skills directory.
+
+Verify: ask an agent "create a skill that …" or "optimize my skill's description" — the skill should trigger.
+
+## Examples
+
+The minimal complete example is in `references/quickstart.md` — the official `roll-dice` skill (a sub-20-line `SKILL.md` with name + description + executable body). The starter skeleton is `assets/skill-template.md`; copy it to `<name>/SKILL.md` and edit.
+
+## Trigger evals
+
+`evals/trigger-queries.json` is the regression eval set for the description (positive + negative examples). Run the eval and record the pass rate before changing the description; the method (multi-run trigger rate, train/validation split, avoiding overfitting) is in `evals/README.md`, consistent with `references/optimizing-descriptions.md`.
+
+## Source & version
+
+Distilled from the [agentskills.io](https://agentskills.io) official docs, covering all seven pages: Overview, Specification, Quickstart, Best practices, Optimizing descriptions, Evaluating, Using scripts. Where the skill and the official docs disagree, **the official docs win**. Discrepancies welcome via issue or PR.
+
+## Scope
+
+Covers the complete methodology and format spec for **creating, optimizing, evaluating, and bundling Agent Skills**. Does not cover installation/deployment or runtime details of any specific agent — those belong to each agent's own docs.
+
+## Maintenance & contributing
+
+- Before updating any `references/`, check the corresponding official page and cite the source.
+- Respect Agent Skills constraints: kebab-case name matching the directory; description ≤ 1024 chars; progressive disclosure in the body.
+- PRs welcome: fixes, more examples, a larger eval set, other languages.
 
 ## License
 
