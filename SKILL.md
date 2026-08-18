@@ -1,6 +1,6 @@
 ---
 name: skill-loomery
-description: Create and refine Agent Skills. A standard workflow for authoring, optimizing, evaluating, and bundling Agent Skills (SKILL.md format). Use when creating a new skill, improving a skill's description or instructions, setting up evals, or bundling reusable scripts.
+description: 创建、优化、评估、打包 Agent Skills 的标准流程。当需要新建 skill、改进 description 或指令、搭建 evals、或打包可复用脚本时使用。Create and refine Agent Skills. A standard workflow for authoring, optimizing, evaluating, and bundling Agent Skills (SKILL.md format). Use when creating a new skill, improving a skill's description or instructions, setting up evals, or bundling reusable scripts.
 license: MIT
 compatibility: "Any skills-compatible agent (Claude Code, OpenAI Codex, VS Code Copilot, DSH, etc.). No special system dependencies; optional tools: git, uv, npm."
 metadata:
