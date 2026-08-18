@@ -31,6 +31,18 @@ Stop relying on "flipping through pages + writing by feel". Standardize the act 
 
 This repo is that pipeline, itself built as a compliant skill. **Eating our own dog food**: skill-loomery was made with skill-loomery's own standard.
 
+## What's inside
+
+```
+skill-loomery/
+├── SKILL.md      # entry: frontmatter + core workflow + hard rules
+├── references/   # 6 detailed standards, loaded on demand (progressive disclosure)
+├── assets/       # starter skeleton (skill-template)
+└── evals/        # description trigger eval set + method
+```
+
+references cover: format spec · writing best practices · description trigger optimization · output-quality evaluation · script bundling · minimal-example onboarding.
+
 ## Directory structure
 
 ```

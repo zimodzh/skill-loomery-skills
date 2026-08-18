@@ -31,6 +31,18 @@
 
 这个仓库就是把这条流水线本身，做成一个符合规范的 skill。**狗粮自食**：skill-loomery 就是用 skill-loomery 的规范打造的。
 
+## 技能里有什么
+
+```
+skill-loomery/
+├── SKILL.md      # 入口：frontmatter + 核心流程 + 铁律
+├── references/   # 6 份详细标准，按需加载（渐进式披露）
+├── assets/       # 起步骨架（skill-template）
+└── evals/        # description 触发评测集 + 评测方法
+```
+
+references 覆盖：格式规范 · 写作最佳实践 · description 触发优化 · 输出质量评估 · 脚本打包 · 最小示例入门。
+
 ## 目录结构
 
 ```
@@ -39,7 +51,7 @@ skill-loomery/
 ├── scripts/                        # 可执行脚本（说明见 scripts/README.md）
 │   └── .gitkeep                    # 占位文件，使空目录被 git 跟踪
 ├── references/                     # 按需加载的参考文档（渐进披露，索引见 references/README.md）
-│   ├── quickstart.md                # skill 定义 + 三阶段 + roll-dice 最小示例
+│   ├── quickstart.md               # skill 定义 + 三阶段 + roll-dice 最小示例
 │   ├── specification.md            # SKILL.md 格式规范
 │   ├── best-practices.md           # 写好 skill 的实践
 │   ├── optimizing-descriptions.md  # 优化 description 触发
